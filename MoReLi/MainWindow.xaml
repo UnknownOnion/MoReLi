@@ -7,6 +7,25 @@
         mc:Ignorable="d"
         Title="MoReLi" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+            
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Row="0" Margin="10">
+            <ComboBox x:Name="Cbx_category" Height="30" Width="150">
+                
+            </ComboBox>
+            <TextBox x:Name="Txb_searchbox" Height="30" Width="250">
+                
+            </TextBox>
+        </WrapPanel>
+
+        <Button x:Name="Btn_import" Grid.Row="2" Margin="10" HorizontalAlignment="Right" Height="30" Width="100" Content="Import"/>
+
+        <local:UC_SewingPatternDataGrid Grid.Row="1"/>
+
     </Grid>
 </Window>
