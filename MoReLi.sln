@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoReLi", "MoReLi\MoReLi.csproj", "{4EF623D9-BA53-4F7E-AEF0-D127702B570A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{248FB461-AA76-4289-A896-985ED8CD3E64}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EF623D9-BA53-4F7E-AEF0-D127702B570A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF623D9-BA53-4F7E-AEF0-D127702B570A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF623D9-BA53-4F7E-AEF0-D127702B570A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF623D9-BA53-4F7E-AEF0-D127702B570A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A04A86D7-2099-4068-9B47-EF9F0EF50E31}
+	EndGlobalSection
+EndGlobal
