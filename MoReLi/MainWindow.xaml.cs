@@ -20,9 +20,16 @@ namespace MoReLi
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+            List<SewingPattern> lOfSP = new List<SewingPattern>()
+            {
+               SewingPatternLoader.Instance.GetSewingPattern(@"C:\Users\Victor\Desktop\BeeShorty Man")
+                
+            };
+            DataContext = lOfSP;
         }
     }
 }

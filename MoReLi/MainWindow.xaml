@@ -25,7 +25,7 @@
 
         <Button x:Name="Btn_import" Grid.Row="2" Margin="10" HorizontalAlignment="Right" Height="30" Width="100" Content="Import"/>
 
-        <local:UC_SewingPatternDataGrid Grid.Row="1"/>
+        <local:UC_SewingPatternDataGrid Grid.Row="1" DataContext="{Binding}"/>
 
     </Grid>
 </Window>

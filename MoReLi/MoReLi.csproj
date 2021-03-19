@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SewingPattern.cs" />
+    <Compile Include="SewingPatternLoader.cs" />
     <Compile Include="UC_SewingPatternDataGrid.xaml.cs">
       <DependentUpon>UC_SewingPatternDataGrid.xaml</DependentUpon>
     </Compile>

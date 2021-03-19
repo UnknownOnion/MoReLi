@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid x:Name="DG_ListOfSewingPattern" AutoGenerateColumns="False">
+        <DataGrid x:Name="DG_ListOfSewingPattern" AutoGenerateColumns="False" ItemsSource="{Binding}" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" SelectionMode="Single">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Width="50">
                     <DataGridTemplateColumn.CellTemplate>
@@ -20,29 +20,25 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Header="Bild" Width="1*">
+                <DataGridTemplateColumn Header="Bild" Width="300">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Image>
-                                <!--TODO Bilder einbinden-->
-                            </Image>
+                            <Image Source="{Binding Path=Image}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-
-                <DataGridTextColumn Header="Name" Width="1*">
-                    <!--TODO Binding setzen-->
+                <DataGridTextColumn Header="Name" Width="1*" Binding="{Binding Path=Name}">
+                 
                 </DataGridTextColumn>
-
-                <DataGridTemplateColumn Header="Dateien" Width="1*">
+                <DataGridTemplateColumn Header="Dateien" Width="1.5*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <ListBox SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged">
+                            <ListBox SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged" ItemsSource="{Binding Path=Files}">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image></Image>
-                                            <TextBlock></TextBlock>
+                                            <!--<Image></Image>-->
+                                            <TextBlock Text="{Binding Path=Name}"/>
                                             <!--TODO Binding für Image und Textblock-->
                                         </StackPanel>
                                     </DataTemplate>
@@ -52,14 +48,14 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Header="Tags" Width="1*">
+                <DataGridTemplateColumn Header="Tags" Width="0.5*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <ItemsControl>
+                            <ItemsControl ItemsSource="{Binding Path=Tags}">
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
                                         <Border>
-                                            <TextBlock>
+                                            <TextBlock Text="{Binding}">
                                                 <!--TODO Binding-->
                                             </TextBlock>
                                         </Border>
